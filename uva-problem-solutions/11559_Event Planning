@@ -1,0 +1,41 @@
+Pseudo code:
+1. input  N, B,H,W
+2. loop 1 to H
+3. input p
+4. min = some large value
+5. loop   1 to W
+6. input a 
+7. if(a>=N) then if(min>p*N)  then min = N*p
+8. if(min<=B) print min else print "stay home"
+
+
+Program:
+#include <stdio.h>
+ int main()
+{
+	 int N,B,H,W,p,a,i,j,cost,minCost;
+	while(scanf("%d%d%d%d",&N,&B,&H,&W)!=EOF)
+	{
+		minCost=B+1;
+		for(i=1;i<=H;i++)
+		{
+                		scanf("%d",&p);
+                		cost=N*p;
+                		for(j=1;j<=W;j++)
+                		{
+				scanf("%d",&a);
+				if((N<=a)&&(minCost>cost))
+				minCost=cost;
+			}
+           		 }
+           		 if(minCost<=B)
+            		{
+                	printf("%d\n",minCost);
+           		 }
+            		else if(minCost>B)
+            		{
+                		printf("stay home\n");
+            		}
+        	}
+	return 0;
+}

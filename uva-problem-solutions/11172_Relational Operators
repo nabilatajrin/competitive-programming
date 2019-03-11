@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main()
+{
+    int a,b,t,x;
+    scanf("%d",&x);
+    for(t=1;t<=x;t++)
+    {
+        scanf("%d%d",&a,&b);
+        if(a<b)
+        {
+            printf("<\n");
+        }
+        else if(a>b)
+        {
+            printf(">\n");
+        }
+        else if(a==b)
+        {
+            printf("=\n");
+        }
+    }
+    return 0;
+}

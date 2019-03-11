@@ -1,0 +1,31 @@
+•  #include <stdio.h>
+•   
+•  int main()
+•  {
+•      int i,j,k,n;
+•      while(scanf("%d",&n)!=EOF)
+•      {
+•          printf("\n");
+•          for(k=1;k<=n+2;k++)
+•          {
+•              printf("*");
+•          }
+•          printf("\n");
+•          for(i=1;i<=n;i++)
+•          {
+•              printf("*");
+•              for(j=1;j<=n;j++)
+•              {
+•                  printf("+");
+•              }
+•              printf("*");
+•              printf("\n");
+•          }
+•          for(k=1;k<=n+2;k++)
+•          {
+•              printf("*");
+•          }
+•          printf("\n\n");
+•      }
+•      return 0;
+•  }

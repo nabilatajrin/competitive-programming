@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    int n, i, j, x[5], output;
+
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        output=1;
+        for(j=0;j<5;j++)
+        {
+            scanf("%d",&x[j]);
+        }
+        for(j=0;j<5;j++)
+        {
+            if(x[j]+1==x[j+1])
+            {
+                output=output+1;
+            }
+        }
+        if(output==5)
+        {
+            printf("Y\n");
+        }
+        else if(output<5)
+        {
+            printf("N\n");
+        }
+    }
+    return 0;
+}
+
+
+
+Or, using function:
+
+
+•  #include<stdio.h>
+•  #include<algorithm>
+•  using namespace std;
+•   
+•  int x[5];
+•  bool check(){
+•   for(int j=0;j<5-1;j++)
+•   {
+•    if(x[j]+1!=x[j+1])
+•     return false;
+•   }
+•   return true;
+•  }
+•   
+•  int main()
+•  {
+•   int n, i,j;
+•   scanf("%d",&n);
+•   for(i=0;i<n;i++)
+•   {
+•    for(j=0;j<5;j++)
+•     scanf("%d",&x[j]);
+•   
+•    if(check())
+•     printf("Y\n");
+•    else
+•     printf("N\n");
+•   }
+•   return 0;
+•  }

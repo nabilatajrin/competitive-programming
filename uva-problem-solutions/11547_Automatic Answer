@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,t,n,result,tens;
+    while(scanf("%d",&t)!=EOF)
+    {
+        for(i=1;i<=t;i++)
+        {
+            scanf("%d",&n);
+            result=((((((n*567)/9)+7492)*235)/47)-498);
+            if(result>=0)
+            {
+                tens=((result/10)%10);
+            }
+            if (result<0)
+            {
+                tens=((result/10)%10)*(-1);
+            }
+            printf("%d\n",tens);
+        }
+    }
+    return 0;
+}

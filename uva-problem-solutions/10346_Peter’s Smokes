@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,k,e,x;
+    while(scanf("%d%d",&n,&k)!=EOF)
+    {
+        x=n;
+        e=0;
+
+        while(n+e>=k)
+        {
+            n=n+e;
+            e=n%k;
+            n = n/k;
+            x=x+n;
+        }
+        printf("%d\n",x);
+    }
+    return 0;
+}

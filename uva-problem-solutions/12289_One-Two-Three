@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    char string[4];
+
+    scanf("%d",&x);
+    for(i=0;i<x;i++)
+    {
+        scanf("%s",string);
+
+        if((string[0]=='o'&&string[1]=='n')||(string[1]=='n'&&string[2]=='e')||(string[0]=='o'&&string[2]=='e'))
+        {
+            printf("1\n");
+        }
+        else if((string[0]=='t'&&string[1]=='w')||(string[1]=='w'&&string[2]=='o')||(string[0]=='t'&&string[2]=='o'))
+        {
+            printf("2\n");
+        }
+        else
+        {
+            printf("3\n");
+        }
+    }
+
+}

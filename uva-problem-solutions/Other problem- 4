@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int n,temp,lastDigit;
+	scanf(“%d”,&n);
+	temp= n;
+	while(n >= 10)
+	{
+		n= n/10;
+	}
+	lastDigit= temp % 10;
+	printf(“First digit= %d\n”,n);
+	printf(“Last digit= %d”,n);
+	return 0;
+}
