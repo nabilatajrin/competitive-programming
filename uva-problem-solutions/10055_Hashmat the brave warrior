@@ -3,7 +3,6 @@
 int main()
 {
     long long x,y,sub;
-
     while(scanf("%lld%lld",&x,&y)!=EOF)
     {
         if(x>=y)
@@ -11,7 +10,6 @@ int main()
             sub=x-y;
             printf("%lld\n",sub);
         }
-
         else
         {
             sub=y-x;
