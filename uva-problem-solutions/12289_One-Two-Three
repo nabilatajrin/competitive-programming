@@ -4,12 +4,10 @@ int main()
 {
     int i,x;
     char string[4];
-
     scanf("%d",&x);
     for(i=0;i<x;i++)
     {
         scanf("%s",string);
-
         if((string[0]=='o'&&string[1]=='n')||(string[1]=='n'&&string[2]=='e')||(string[0]=='o'&&string[2]=='e'))
         {
             printf("1\n");
@@ -23,5 +21,4 @@ int main()
             printf("3\n");
         }
     }
-
 }
