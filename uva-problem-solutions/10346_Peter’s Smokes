@@ -7,7 +7,6 @@ int main()
     {
         x=n;
         e=0;
-
         while(n+e>=k)
         {
             n=n+e;
