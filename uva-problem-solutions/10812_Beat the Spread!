@@ -4,15 +4,12 @@
 int main()
 {
     int i,n,a,b,x,y;
-
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d%d",&a,&b);
-
         x=(a+b)/2;
         y=abs(a-b)/2; //y=x-b;
-
         if((x+y==a)&& abs(x-y)==b)
         {
             printf("%d %d\n",x,y);
