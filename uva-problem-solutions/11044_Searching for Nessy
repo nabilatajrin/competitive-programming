@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,x,m,n,sonar;
+    scanf("%d",&x);
+    for(i=1;i<=x;i++)
+    {
+        scanf("%d%d",&m,&n);
+        sonar=((m/3)*(n/3));
+        printf("%d\n",sonar);
+    }
+    return 0;
+}

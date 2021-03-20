@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,x,y,n,min,max,output;
+
+    scanf("%d",&x);
+    for(i=0;i<x;i++)
+    {
+        min=100;
+        max=0;
+        scanf("%d",&y);
+        for(j=0;j<y;j++)
+        {
+            scanf("%d",&n);
+            if(n<min)
+                min=n;
+            if(n>max)
+                max=n;
+        }
+        output=(max-min)*2;
+        printf("%d\n",output);
+    }
+    return 0;
+}

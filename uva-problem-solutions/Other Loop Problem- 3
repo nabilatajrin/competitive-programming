@@ -1,0 +1,27 @@
+•   #include<stdio.h>
+•   
+•    int main()
+•	   {
+•      	int i,j,k,n;
+•      	while(scanf("%d",&n)!=EOF)
+•      	{
+•      	    printf("\n");
+•              for (i=0;i<n;i++)
+•              {
+•                  for (j=0;j<n;j++)
+•                  {
+•                      if((j==i)||j==(n-i-1))
+•                      {
+•                          printf("+");
+•                      }
+•                      else
+•                      {
+•                          printf("*");
+•                      }
+•                  }
+•                  printf("\n");
+•              }
+•              printf("\n");
+•      	}
+•      	return 0;
+•      }

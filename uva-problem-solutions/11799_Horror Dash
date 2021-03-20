@@ -1,0 +1,20 @@
+•  #include <stdio.h>
+•  int main()
+•  {
+•      int s,t,x,y,a,max;
+•   
+•      scanf("%d",&x);
+•      for(s=1;s<=x;s++)
+•      {
+•         scanf("%d",&y);
+•         max=0;
+•         for(t=1;t<=y;t++)
+•         {
+•              scanf("%d",&a);
+•              if (a>=max)
+•              max=a;
+•         }
+•         printf("Case %d: %d\n",s,max);
+•      }
+•      return 0;
+•  }

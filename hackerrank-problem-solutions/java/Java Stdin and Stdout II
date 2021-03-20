@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        //int i = scan.nextInt();
+
+        // Write your code here.
+        int i = scan.nextInt();
+        scan.nextLine();  // Consume newline left-over
+        Double d = scan.nextDouble();
+        scan.nextLine();  // Consume newline left-over
+        String s = scan.nextLine();
+        
+        System.out.println("String: " + s);        
+        System.out.println("Double: " + d);        
+        System.out.println("Int: " + i);
+        scan.close();
+       
+    }
+}
+
+
+//Because the Scanner#nextInt method does not consume the last newline character of your input, and thus that newline is consumed in the next call to Scanner#nextLine

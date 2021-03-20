@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int K,N,M,X,Y,a;
+
+    while(scanf("%d",&a)!=EOF)
+    {
+        if(a==0)
+        break;
+
+        scanf("%d%d",&N,&M);
+        for(K=1;K<=a;K++)
+        {
+            scanf("%d%d",&X,&Y);
+
+            if(X>N && Y>M)
+            {
+                printf("NE\n");
+            }
+            else if (X<N && Y>M)
+            {
+                printf("NO\n");
+            }
+            else if (X<N && Y<M)
+            {
+                printf("SO\n");
+            }
+            else if (X>N && Y<M)
+            {
+                printf("SE\n");
+            }
+            else if (X==N || Y==M)
+            {
+                printf("divisa\n");
+            }
+        }
+    }
+
+    return 0;
+}

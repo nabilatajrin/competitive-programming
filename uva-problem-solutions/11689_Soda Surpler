@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int t,i,m,n,k,e,x,y;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        scanf("%d%d%d",&m,&n,&k);
+        {
+            x=m+n;
+            e=0;
+            y=0;
+            while(x+e>=k)
+            {
+                m= x+e;
+                e= m%k;
+                x=m/k;
+                y=y+x;
+            }
+            printf("%d\n",y);
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int m,n,e,x,y;
+    while(scanf("%d",&n)!=EOF)
+    {
+        m=n;
+        if(n==0)
+        {
+            break;
+        }
+        else
+        {
+            x=n;
+            e=0;
+            y=0;
+            while(x+e>=2)
+            {
+                 n=x+e;
+                 if(n==2)
+                 {
+                     n=n+1;
+                 }
+                 e=n%3;
+                 x=n/3;
+                 y=y+x;
+            }
+            printf("%d\n",y+m);
+        }
+    }
+    return 0;
+}

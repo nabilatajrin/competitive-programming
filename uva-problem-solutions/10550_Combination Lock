@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,d,x,rotation,m,n,o;
+    while(scanf("%d%d%d%d",&a,&b,&c,&d)!=EOF)
+    {
+        x=40;
+
+        if((a==0)&&(b==0)&&(c==0)&&(d==0))
+        {
+            break;
+        }
+        else
+        {
+            m=a-b;
+            n=c-b;
+            o=c-d;
+
+            if(m<0)
+            {
+                m=m+x;
+            }
+            if(n<0)
+            {
+                n=n+x;
+            }
+            if(o<0)
+            {
+                o=o+x;
+            }
+            rotation=((2*360)+(m*9))+(360+(n*9))+(o*9);
+            printf("%d\n",rotation);
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,t,x;
+    scanf("%d",&x);
+    for(t=1;t<=x;t++)
+    {
+        scanf("%d%d%d",&a,&b,&c);
+        if((c>=b&&b>=a)||(a>=b&&b>=c))
+        {
+            printf("Case %d: %d\n",t,b);
+        }
+        else if((a>=c&&c>=b)||(b>=c&&c>=a))
+        {
+            printf("Case %d: %d\n",t,c);
+        }
+        else if((b>=a&&a>=c)||(c>=a&&a>=b))
+        {
+            printf("Case %d: %d\n",t,a);
+        }
+    }
+    return 0;
+}

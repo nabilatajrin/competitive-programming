@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c,h,i,j,k;
+    scanf("%d",&a);
+    for(h=0;h<a;h++)
+    {
+        scanf("%d%d",&b,&c);
+        for(i=0;i<c;i++)
+        {
+            for(j=1;j<b;j++)
+            {
+                for(k=0;k<j;k++)
+                {
+                    printf("%d",j);
+                }
+                printf("\n");
+            }
+            for(j=b;j>0;j--)
+            {
+                for(k=0;k<j;k++)
+                {
+                    printf("%d",j);
+                }
+                printf("\n");
+            }
+            if(i<c-1)
+                {
+                    printf("\n");
+                }
+        }
+        if(h<a-1)
+        {
+            printf("\n");
+        }
+    }
+    return 0;
+}

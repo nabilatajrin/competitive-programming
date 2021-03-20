@@ -1,0 +1,13 @@
+Solution:
+#include<stdio.h>
+int main()
+{
+	char c=97;
+	printf(“Alphabets from a-z are:\n”);
+	while(c<=122)
+	{
+		printf(“%c\n”,c);
+		c++;
+	}
+	return 0;
+} 

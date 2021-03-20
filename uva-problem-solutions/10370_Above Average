@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int c,n,i,j,m[1001],sum;
+    double avg,count,output;
+    //Number of test case
+    scanf("%d",&c);
+    for(i=0;i<c;i++)
+    {
+        count=0;
+        sum=0;
+        //Number of students
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&m[j]);
+            sum+=m[j];
+        }
+        avg=sum/n;
+        for(j=0;j<n;j++)
+        {
+            if(m[j]>avg)
+            count=count+1;
+        }
+        output=((count/n)*100);
+        printf("%.3lf%%\n",output);
+    }
+    return 0;
+}

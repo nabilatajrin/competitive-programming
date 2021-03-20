@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,i,a,b,j,x;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a);
+        scanf("%d",&b);
+        if(b>a)
+        {
+            x=0;
+            for(j=a;j<=b;j++)
+            {
+                if(j%2==1)
+                {
+                    x=x+j;
+                }
+            }
+            printf("Case %d: %d\n",i+1,x);
+        }
+    }
+    return 0;
+}

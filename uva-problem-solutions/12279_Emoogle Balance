@@ -1,0 +1,31 @@
+•  #include <stdio.h>
+•   
+•  int main()
+•  {
+•      int n,i,k,a,b,t,output;
+•      t=1;
+•      while(scanf("%d",&n)!=EOF)
+•      {
+•          if(n==0)
+•          {
+•              break;
+•          }
+•          a=0;
+•          b=0;
+•          for(i=0;i<n;i++)
+•          {
+•              scanf("%d",&k);
+•              if(k>0&&k<100)
+•              {
+•                  a=a+1;
+•              }
+•              if(k==0)
+•              {
+•                  b=b+1;
+•              }
+•              output=a-b;
+•          }
+•          printf("Case %d: %d\n",t++,output);
+•      }
+•      return 0;
+•  }
