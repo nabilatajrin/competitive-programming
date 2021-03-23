@@ -43,3 +43,8 @@ class Solution:
                 h[num] = i
             else:
                 return [h[n], i]
+
+
+
+
+[ref: https://leetcode.com/problems/two-sum/]

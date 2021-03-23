@@ -24,7 +24,7 @@ Solution:
 # Time:  O(n)
 # Space: O(1)
 
-class Solution():
+class Solution:
     def canPlaceFlowers(self, flowerbed, n):
         """
         :type flowerbed: List[int]
