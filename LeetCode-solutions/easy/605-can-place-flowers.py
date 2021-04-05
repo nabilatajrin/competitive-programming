@@ -43,9 +43,11 @@ class Solution:
 -------------
 Solution 02:
 
+
 if not flowerbed[i]==0:
             i+=1
             continue
+
         elif i==0:
             if i+1 <=length:
                 if flowerbed[i+1]==0:
