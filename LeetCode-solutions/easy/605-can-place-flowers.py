@@ -20,7 +20,7 @@ There are no two adjacent flowers in flowerbed.
 
 
 ------------
-Solution:
+Solution 01:
 # Time:  O(n)
 # Space: O(1)
 
@@ -38,3 +38,37 @@ class Solution:
             if n <= 0:
                 return True
         return False
+
+
+-------------
+Solution 02:
+
+if not flowerbed[i]==0:
+            i+=1
+            continue
+        elif i==0:
+            if i+1 <=length:
+                if flowerbed[i+1]==0:
+                    spot_found = True
+            else:
+                spot_found = True
+        elif i==length:
+            if not i-1 < 0:
+                if flowerbed[i-1] == 0:
+                    spot_found = True
+            else:
+                spot_found = True
+        else:
+            if flowerbed[i-1] == flowerbed[i+1] == 0:
+                spot_found = True
+        
+        if spot_found:
+            spots+=1
+            i+=2 # go to the next possible spot. Reserve this one
+            if spots>=n:
+                return True                
+        else:
+            i+=1 #go to the next possible spot. 
+        
+    return False
+
