@@ -51,3 +51,33 @@ class Solution:
                 nums[count] = nums[i]
                 count +=1
         return count
+
+------
+runtime : 32 ms, beats 73.16%
+memory usage: 13.9 mb, beats 99.92%
+
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        i = 0
+        while i < len(nums):
+            if nums[i] == val:
+                del nums[i]
+                continue
+            i +=1 
+        return len(nums)
+
+--------------------------------
+rumtime: 32 ms
+
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        i = 0
+        length = len(nums)
+        while (i < length):
+            if nums[i] == val:
+                nums.remove(nums[i])
+                length -= 1
+                continue
+            i += 1
+        return len(nums)
+        
