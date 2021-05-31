@@ -14,7 +14,6 @@ int len = removeElement(nums, val);
 for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
- 
 
 Example 1:
 Input: nums = [3,2,2,3], val = 3
@@ -27,15 +26,12 @@ Input: nums = [0,1,2,2,3,0,4,2], val = 2
 Output: 5, nums = [0,1,4,0,3]
 Explanation: Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4. Note that the order of those five elements can be arbitrary. It doesn't matter what values are set beyond the returned length.
  
-
 Constraints:
-
 0 <= nums.length <= 100
 0 <= nums[i] <= 50
 0 <= val <= 100
 
 -------------------------------------------------------------
-
 Solution:
 
 class Solution:
@@ -51,7 +47,6 @@ class Solution:
                 nums[count] = nums[i]
                 count +=1
         return count
-
 ------
 runtime : 32 ms, beats 73.16%
 memory usage: 13.9 mb, beats 99.92%
@@ -65,7 +60,6 @@ class Solution:
                 continue
             i +=1 
         return len(nums)
-
 --------------------------------
 rumtime: 32 ms
 
@@ -80,4 +74,3 @@ class Solution:
                 continue
             i += 1
         return len(nums)
-        
