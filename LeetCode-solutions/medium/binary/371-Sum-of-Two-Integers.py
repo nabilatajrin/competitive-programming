@@ -5,5 +5,5 @@ def getSum(self, a, b):
     :type b: int
     :rtype: int
     """
-    list=[a,b]
+    list = [a,b]
     return sum(list)
