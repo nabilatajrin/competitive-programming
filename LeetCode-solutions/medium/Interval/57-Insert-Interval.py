@@ -1,5 +1,5 @@
 class Solution:
-  #use insert, makes it O(n)
+  #use insort, makes it O(n)
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         bisect.insort(intervals,newInterval)
         ans = [intervals[0]]
