@@ -1,4 +1,5 @@
 class Solution:
+    #Simple Python two-pointer solution
     def characterReplacement(self, s, k):        
         longest_window = 0
         window_counts = collections.defaultdict(int)
