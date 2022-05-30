@@ -1,52 +1,49 @@
-#an implementation based on Implement Trie in LeetCode. TrieNode, Trie, Solution are treated as seperated classes.
-class TrieNode():
-    def __init__(self):
-        self.children = collections.defaultdict(TrieNode)
-        self.isWord = False
-    
-class Trie():
-    def __init__(self):
-        self.root = TrieNode()
-    
-    def insert(self, word):
-        node = self.root
-        for w in word:
-            node = node.children[w]
-        node.isWord = True
-    
-    def search(self, word):
-        node = self.root
-        for w in word:
-            node = node.children.get(w)
-            if not node:
-                return False
-        return node.isWord
-    
-class Solution(object):
+#Python code use trie and dfs
+class Solution:
+    # @param {character[][]} board
+    # @param {string[]} words
+    # @return {string[]}
     def findWords(self, board, words):
-        res = []
-        trie = Trie()
-        node = trie.root
+        #make trie
+        count = Counter()
+        for l in board:
+            count += Counter(l)
+        trie={}
         for w in words:
-            trie.insert(w)
+            wc = Counter(w)
+            for c in wc:
+				# optimization, ignore word if there isn't enough c in board
+                if wc[c] > count[c]:
+                    continue
+            t=trie
+            for c in w:
+                if c not in t:
+                    t[c]={}
+                t=t[c]
+            t['#']='#'
+        self.res=[]
         for i in range(len(board)):
             for j in range(len(board[0])):
-                self.dfs(board, node, i, j, "", res)
-        return res
+                self.find(board,i,j,trie,[])
+        return self.res
     
-    def dfs(self, board, node, i, j, path, res):
-        if node.isWord:
-            res.append(path)
-            node.isWord = False
-        if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]):
-            return 
-        tmp = board[i][j]
-        node = node.children.get(tmp)
-        if not node:
-            return 
-        board[i][j] = "#"
-        self.dfs(board, node, i+1, j, path+tmp, res)
-        self.dfs(board, node, i-1, j, path+tmp, res)
-        self.dfs(board, node, i, j-1, path+tmp, res)
-        self.dfs(board, node, i, j+1, path+tmp, res)
-        board[i][j] = tmp
+    def find(self,board,i,j,trie,pre):
+        if '#' in trie:
+			# optimization, delete for avoiding duplicated matches
+            del trie["#"]
+            self.res.append(''.join(pre))
+        if i<0 or i>=len(board) or j<0 or j>=len(board[0]):
+            return
+        if board[i][j] in trie:
+            tmp = board[i][j]
+            board[i][j] = '$'
+            pre.append(tmp)
+            self.find(board,i+1,j,trie[tmp],pre)
+            self.find(board,i,j+1,trie[tmp],pre)
+            self.find(board,i-1,j,trie[tmp],pre)
+            self.find(board,i,j-1,trie[tmp],pre)
+            board[i][j] = tmp
+            pre.pop()
+            if not trie[board[i][j]]:
+				# nothing in trie[board[i][j]] because of matched before, delete node for optimization
+                del trie[board[i][j]]
