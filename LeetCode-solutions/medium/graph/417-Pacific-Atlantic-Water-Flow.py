@@ -1,4 +1,5 @@
 class Solution(object):
+    #Python DFS bests 85%
     def pacificAtlantic(self, matrix):
         """
         :type matrix: List[List[int]]
