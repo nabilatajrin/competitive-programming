@@ -8,6 +8,6 @@ class Solution:
         """
         #test
         print(len(nums)) #number of digits
-        print(len(set(nums))) #types of digits
+        print(len(set(nums))) #unique of digits
         
         return len(nums) != len(set(nums))
