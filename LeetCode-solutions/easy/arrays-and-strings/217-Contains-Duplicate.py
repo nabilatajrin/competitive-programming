@@ -7,7 +7,7 @@ class Solution:
         :rtype: bool
         """
         #test
-        print(len(nums)) #number of digits
-        print(len(set(nums))) #unique of digits
+        print(len(nums)) #total number of digits
+        print(len(set(nums))) #number of unique digits
         
         return len(nums) != len(set(nums))
