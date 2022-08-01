@@ -39,7 +39,7 @@ class Solution:
                 return [h[n], i]
             
             
-#Solution 2
+#Solution 2: *****
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -58,7 +58,12 @@ class Solution:
 [ref: https://leetcode.com/problems/two-sum/]
 
 
-Solution 3:
+Solution 3: *****
+    Use:
+    -hashmap
+    -enumerate()
+    -nested loop
+    
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         prevMap = {}  # val -> index
