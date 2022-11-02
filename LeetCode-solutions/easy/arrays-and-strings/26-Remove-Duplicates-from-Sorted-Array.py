@@ -1,5 +1,3 @@
-[Google|3, Facebook|3, Amazon|3, Microsoft|2]
-
 LeetCode: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 26. Remove Duplicates from Sorted Array
@@ -34,8 +32,7 @@ Constraints:
 -104 <= nums[i] <= 104
 nums is sorted in ascending order.
 
---------------------------
---------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
 Solution:
 
 class Solution:
