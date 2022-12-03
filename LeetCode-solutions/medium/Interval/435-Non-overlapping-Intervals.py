@@ -9,7 +9,6 @@ class Solution:
             if curr[1] <= intervals[i][0]:
                 count += 1
                 curr = intervals[i]
-                
         return n - count   
     
     
