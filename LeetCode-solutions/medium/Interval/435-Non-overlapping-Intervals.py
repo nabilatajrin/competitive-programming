@@ -11,7 +11,6 @@ class Solution:
                 curr = intervals[i]
         return n - count   
     
-    
     #2nd solution
     def eraseOverlapIntervals2(self, intervals: List[List[int]]) -> int:
         intervals.sort()
