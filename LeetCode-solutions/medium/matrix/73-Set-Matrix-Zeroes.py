@@ -25,7 +25,7 @@ class Solution:
                  matrix[row][col] = 0
                 
                 
-        #solution 2: Most optimized using O(1) space:
+    #solution 2: Most optimized using O(1) space:
     def setZeroes_2(self, matrix: List[List[int]]) -> None:
         m = len(matrix)
         n = len(matrix[0])
