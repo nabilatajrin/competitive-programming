@@ -33,7 +33,7 @@ class Solution(object):
                 flowerbed[i] = 1  # palce!
         return False
 
--------------
+------------
 Solution 02:
     def canPlaceFlowers(self, flowerbed, n):
         zeros, ans = 1, 0  # Easier handling of prefixes, just initialize zeros to 1
@@ -45,7 +45,7 @@ Solution 02:
                 zeros = 0
         return ans + zeros // 2 >= n  # Note that suffix zeros need not -1
     
-    
+------------    
 Solution 03:
     def canPlaceFlowers(self, F, n):
         return sum((len(zeros) - 1) // 2 for zeros in ''.join(map(str, [0] + F + [0])).split('1')) >= n
