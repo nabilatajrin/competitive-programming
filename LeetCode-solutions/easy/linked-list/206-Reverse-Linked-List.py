@@ -13,9 +13,7 @@ class Solution:
             prev = curr
         return prev
 
-
 #Recursion
-
     def _reverse(self, node, prev=None):
         if not node:
             return prev
