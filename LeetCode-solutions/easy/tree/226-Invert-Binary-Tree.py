@@ -11,7 +11,6 @@ class Solution:
             root.left, root.right = invert(root.right), invert(root.left)
         return root
     
-    
     #An iterative version using stack:
     def invertTree_2(self, root):
         stack = [root]
