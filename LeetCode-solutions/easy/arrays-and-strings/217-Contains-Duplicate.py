@@ -9,7 +9,6 @@ class Solution:
         #test
         print(len(nums)) #total number of digits
         print(len(set(nums))) #number of unique digits
-        
         return len(nums) != len(set(nums))
     
     
