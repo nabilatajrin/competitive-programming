@@ -3,6 +3,7 @@
 class Solution:
     # @param {integer[]} nums
     # @return {integer[]}
+    
     def productExceptSelf(self, nums):
         p = 1
         n = len(nums)
