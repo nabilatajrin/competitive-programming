@@ -15,9 +15,10 @@ class Solution:
         return max_profit
 ------------------------------------------------------------------
 
-Input
+Input:
 [7,1,5,3,6,4]
-Output
+
+Output:
 5
 Expected
 5
