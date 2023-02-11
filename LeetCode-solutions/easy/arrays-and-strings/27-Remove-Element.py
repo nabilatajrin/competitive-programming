@@ -33,9 +33,8 @@ Constraints:
 0 <= nums[i] <= 50
 0 <= val <= 100
 
--------------------------------------------------------------
+-----------------------------
 Solution:
-
 class Solution:
     def removeElement(self, nums, val):
         """
@@ -49,10 +48,12 @@ class Solution:
                 nums[count] = nums[i]
                 count +=1
         return count
-------
+-----------------------------
 runtime : 32 ms, beats 73.16%
 memory usage: 13.9 mb, beats 99.92%
 
+    
+    
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         i = 0
@@ -62,9 +63,11 @@ class Solution:
                 continue
             i +=1 
         return len(nums)
---------------------------------
+-----------------------------
 rumtime: 32 ms
 
+    
+    
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         i = 0
