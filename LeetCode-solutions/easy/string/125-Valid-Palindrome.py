@@ -1,3 +1,4 @@
+Solution 1:
 class Solution:
     def isPalindrome(self, s):
         s = ''.join(e for e in s if e.isalnum()).lower()
@@ -15,7 +16,9 @@ class Solution:
                 return False
             l +=1; r -= 1
         return True
-                    
+
+    
+----------------------------------------------
 Solution 2:
 class Solution:
     def isPalindrome(self, s: str) -> bool:
