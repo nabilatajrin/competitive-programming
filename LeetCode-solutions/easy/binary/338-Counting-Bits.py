@@ -3,7 +3,6 @@ class Solution:
         nextOrder = 2
         tracker = 0
         counter = [0]*(num+1)
-
         for i in range(1, num+1):
             if i == nextOrder:
                 nextOrder *= 2
