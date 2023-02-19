@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     #Naive approach, O(|s| * |t|)
     def isMatch(self, s, t):
