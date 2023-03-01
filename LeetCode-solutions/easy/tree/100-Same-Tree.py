@@ -21,4 +21,3 @@ class Solution:
     #The first way as one-liner:
     def isSameTree(self, p, q):
         return p and q and p.val == q.val and all(map(self.isSameTree, (p.left, p.right), (q.left, q.right))) or p is q
-        
