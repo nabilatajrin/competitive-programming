@@ -17,7 +17,6 @@ class Solution:
     def isAnagram3(self, s, t):
         return sorted(s) == sorted(t)
     
-    
 ---------------------    
 Efficient Solution 2:
     Use:
@@ -35,17 +34,14 @@ class Solution:
             countT[t[i]] = 1 + countT.get(t[i], 0)
         return countS == countT
     
-  
 --------------------- 
 Efficient solution using py library:
     class Solution:
         def isAnagram(self, s: str, t: str) -> bool:
             return Counter(s) == Counter(t)
         
-  
 --------------------- 
 Less efficient solution using py library:
     class Solution:
         def isAnagram(self, s: str, t: str) -> bool:
             return sorted(s) == sorted(t)
-    
