@@ -17,7 +17,6 @@ class Solution:
             l +=1; r -= 1
         return True
 
-    
 ----------------------------------------------
 Solution 2:
 class Solution:
