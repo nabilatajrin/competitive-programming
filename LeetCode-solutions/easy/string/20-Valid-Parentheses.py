@@ -13,10 +13,9 @@ class Solution(object):
                     return False
             else:
                 stack.append(i)
-                
         return len(stack) == 1
     
-    
+------------        
 #solution 02
 class Solution:
     # @return a boolean
