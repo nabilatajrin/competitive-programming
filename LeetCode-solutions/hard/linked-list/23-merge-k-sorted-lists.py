@@ -22,7 +22,6 @@ class Solution:
                 heapq.heappush(h, (node.next.val, node.next))
         return head.next
     
-    
     #solution 2: fixed heapq
     def mergeKLists_heapq(self, lists):
         h = []
