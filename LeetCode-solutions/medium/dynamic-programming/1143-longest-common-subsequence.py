@@ -11,5 +11,4 @@ class Solution:
                     memo[row][col] = 1 + memo[row - 1][col - 1]
                 else:
                     memo[row][col] = max(memo[row][col - 1], memo[row - 1][col])
-
         return memo[m][n]
