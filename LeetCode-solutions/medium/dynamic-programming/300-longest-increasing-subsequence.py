@@ -12,7 +12,6 @@ class Solution:
                 else:
                     return mid
             return lo
-        
         sub = []
         for val in nums:
             pos = binarySearch(sub, val)
