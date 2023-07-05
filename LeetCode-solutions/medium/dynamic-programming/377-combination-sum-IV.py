@@ -5,7 +5,6 @@ class Solution:
             memo[target] += sum((1, self.combinationSum4(nums, target - num))[target != num] 
                                 for num in nums)
         return memo[target]
-    
     #This is a recursive Python code
     def combinationSum4WithLength(self, nums, target, length, memo=collections.defaultdict(int)):
         if length <= 0: return 0
