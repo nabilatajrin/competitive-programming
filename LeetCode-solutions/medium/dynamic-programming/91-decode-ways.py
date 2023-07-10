@@ -8,7 +8,6 @@ class Solution:
     def numDecodings(self, s: str) -> int:
         if not s:
             return 0
-
         dp = [0 for x in range(len(s) + 1)] 
 
         # base case initialization
