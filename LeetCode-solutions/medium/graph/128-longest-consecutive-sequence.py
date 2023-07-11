@@ -6,7 +6,6 @@ class Solution:
         lastNum = nums[0]
         curLength = 1
         res = 1
-        
         for i in range(1, len(nums)):
             if nums[i] == lastNum + 1:
                 curLength += 1
@@ -14,35 +13,31 @@ class Solution:
                 curLength = 1
             res = max(res, curLength)
             lastNum = nums[i]
-            
         return res
-    
+        
     #Complexity:
     #Time: O(NlogN), where N is length of nums array
     #Space: O(N)
-    
-    
+
+    -----------
     #Solution 2: Top down DP:
     def longestConsecutive(self, nums: List[int]) -> int:
         myset = set(nums)
-        
         @lru_cache(None)
         def dp(num):
             if num not in myset:
                 return 0
-            
             return dp(num-1) + 1
-        
         ans = 0
         for num in nums:
             ans = max(ans, dp(num))
         return ans
-    
+        
     #Complexity:
     #Time: O(N), where N is length of nums array
     #Space: O(N)
     
-    
+    -----------
     #Solution 3: Find the left most of the consecutive subsequence then expand the right side
     def longestConsecutive(self, nums: List[int]) -> int:
         res = 0
@@ -55,8 +50,7 @@ class Solution:
                     right += 1
                 res = max(res, right - left + 1)
         return res
-    
+        
     #Complexity:
     #Time: O(N), where N is length of nums array
     #Space: O(N)
-        
