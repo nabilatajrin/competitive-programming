@@ -20,8 +20,6 @@ class Solution:
             if not dfs(i):
                 return False
         return True
-    
     #if node v has not been visited, then mark it as 0.
     #if node v is being visited, then mark it as -1. If we find a vertex marked as -1 in DFS, then their is a ring.
     #if node v has been visited, then mark it as 1. If a vertex was marked as 1, then no ring contains v or its successors.
-        
