@@ -10,10 +10,8 @@ class Solution(object):
         m = len(matrix)
         n = len(matrix[0])
         p_visited = [[False for _ in range(n)] for _ in range(m)]
-        
         a_visited = [[False for _ in range(n)] for _ in range(m)]
         result = []
-        
         for i in range(m):
             # p_visited[i][0] = True
             # a_visited[i][n-1] = True
@@ -24,14 +22,11 @@ class Solution(object):
             # a_visited[m-1][j] = True
             self.dfs(matrix, 0, j, p_visited, m, n)
             self.dfs(matrix, m-1, j, a_visited, m, n)
-            
         for i in range(m):
             for j in range(n):
                 if p_visited[i][j] and a_visited[i][j]:
                     result.append([i,j])
-        return result
-                
-                
+        return result        
     def dfs(self, matrix, i, j, visited, m, n):
         # when dfs called, meaning its caller already verified this point 
         visited[i][j] = True
