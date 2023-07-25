@@ -45,26 +45,26 @@ class Solution(object):
 ------------
 Explanation:
 1. The function plant_flowers takes two parameters: flowerbed, which is a list representing the flowerbed with 0s and 1s, and n, 
-which is the number of flowers we want to plant in the empty plots.
+  which is the number of flowers we want to plant in the empty plots.
 2. The function starts with a simple check. If n is 0, it means we don't need to plant any flowers, so we can return True immediately.
 3. To handle the boundary cases, we pad the flowerbed list with 0s at the beginning and end. This is because the first and last plots 
-can potentially have only one neighbor, and we don't need to check for adjacent flowers there.
+  can potentially have only one neighbor, and we don't need to check for adjacent flowers there.
 4. We then loop through the flowerbed list from the second element (index 1) to the second-to-last element (index len(flowerbed) - 2). 
-This is because we have added padding, and we need to avoid considering those padded elements in the loop.
+  This is because we have added padding, and we need to avoid considering those padded elements in the loop.
 5. Inside the loop, we check three conditions:
-a) flowerbed[i] == 0: This ensures that the current plot is empty, so we can plant a flower there.
-b) flowerbed[i - 1] == 0: This ensures that the previous plot is also empty, satisfying the no-adjacent-flowers rule.
-c) flowerbed[i + 1] == 0: This ensures that the next plot is empty too, again satisfying the no-adjacent-flowers rule.
+     a) flowerbed[i] == 0: This ensures that the current plot is empty, so we can plant a flower there.
+     b) flowerbed[i - 1] == 0: This ensures that the previous plot is also empty, satisfying the no-adjacent-flowers rule.
+     c) flowerbed[i + 1] == 0: This ensures that the next plot is empty too, again satisfying the no-adjacent-flowers rule.
 6. If all three conditions are met, it means we found an empty plot where we can plant a flower. So, we update the flowerbed list to 
-plant a flower in that plot by setting flowerbed[i] = 1.
+  plant a flower in that plot by setting flowerbed[i] = 1.
 7. We then decrement the n variable since we have planted a flower, indicating that we have one less flower to plant.
 8. If n becomes 0 at any point during the loop, it means we have successfully planted all the flowers we wanted, so we return True.
 9. If we complete the loop and still have some flowers left to plant (i.e., n > 0), it means we couldn't plant all the flowers due 
-to the no-adjacent-flowers rule. In this case, we return False.
+  to the no-adjacent-flowers rule. In this case, we return False.
 10. After the loop, the function returns either True (if all flowers were successfully planted) or False (if there wasn't enough space 
-to plant all the flowers).
+  to plant all the flowers).
 11. The code then demonstrates how to use the plant_flowers function by creating a flowerbed and specifying the number of flowers we want 
-to plant. It prints a message accordingly, indicating whether we were able to plant all the flowers or not.
+  to plant. It prints a message accordingly, indicating whether we were able to plant all the flowers or not.
 
 ------------
 Solution 02:
