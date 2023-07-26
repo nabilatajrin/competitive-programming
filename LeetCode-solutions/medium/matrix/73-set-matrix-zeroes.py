@@ -21,7 +21,6 @@ class Solution:
          for col in range(n):
              if zeroes_row[row] or zeroes_col[col]:
                  matrix[row][col] = 0
-                
 		
                 
     #solution 2: Most optimized using O(1) space:
