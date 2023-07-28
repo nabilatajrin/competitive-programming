@@ -86,7 +86,40 @@ class Solution:
                 p2 -= 1
 
 
+Approach 4 : Four Pointers
+def merge(nums1, m, nums2, n):
+    # Starting from the end of both arrays.
+    p1, p2, p = m - 1, n - 1, m + n - 1
 
+    while p1 >= 0 and p2 >= 0:
+        if nums1[p1] >= nums2[p2]:
+            nums1[p] = nums1[p1]
+            p1 -= 1
+        else:
+            nums1[p] = nums2[p2]
+            p2 -= 1
+        p -= 1
 
+    # If there are remaining elements in nums2, we copy them to nums1.
+    nums1[:p2 + 1] = nums2[:p2 + 1]
+------------------
+Explanation:
+The function merge takes four parameters: nums1, m, nums2, and n. nums1 represents the first sorted array with space to accommodate all elements, m is the number of elements in nums1, nums2 represents the second sorted array, and n is the number of elements in nums2 to be merged.
 
+We create three pointers, p1, p2, and p, initialized to the end of nums1, the end of nums2, and the end of the space available in nums1 (after m elements), respectively.
 
+We start a loop that runs while both p1 and p2 are greater than or equal to 0.
+
+Inside the loop, we compare the elements at the positions p1 and p2 in nums1 and nums2, respectively.
+
+If the element at nums1[p1] is greater than or equal to the element at nums2[p2], we place the nums1[p1] element in the available position p in nums1, and then move p1 one step back.
+
+If the element at nums1[p1] is smaller than the element at nums2[p2], we place the nums2[p2] element in the available position p in nums1, and then move p2 one step back.
+
+After placing an element in nums1, we decrement the p pointer.
+
+We repeat this process until we have merged all elements from nums2 into nums1.
+
+If there are any remaining elements in nums2 after the loop (i.e., p2 >= 0), we copy them to the beginning of nums1 since there is enough space for them.
+
+By the end of this function, nums1 will contain the merged and sorted elements of both nums1 and nums2.
