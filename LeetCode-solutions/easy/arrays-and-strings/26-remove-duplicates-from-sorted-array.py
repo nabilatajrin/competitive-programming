@@ -49,3 +49,36 @@ class Solution:
                 nums[len_] = nums[i]
                 len_ +=1
         return len_
+
+-----------------------------------------
+def removeDuplicates(self, nums: List[int]) -> int:
+        if not nums:
+            return 0  # Empty array, so no duplicates.
+
+        # Use two pointers: one to iterate the array, and the other to mark the position to    insert unique elements.
+        j = 0
+
+        for i in range(1, len(nums)):
+            if nums[i] != nums[j]:
+                # Found a new unique element, insert it at the correct position.
+                j += 1
+                nums[j] = nums[i]
+
+        return j + 1  # Length of the array with unique elements.
+
+Explanation:
+The function remove_duplicates takes a sorted list nums as input.
+
+We first check if the list is empty. If it is empty, there are no duplicates, and we return 0 as the length of the modified array.
+
+We use two pointers: i and j. The pointer i iterates through the array starting from index 1, and the pointer j marks the position to insert unique elements.
+
+We loop through the array starting from index 1 (since the first element is always unique).
+
+If the current element nums[i] is different from the element at nums[j], it means we found a new unique element. So, we increment j by 1 and update the value at index j with the unique element at nums[i].
+
+We repeat this process until i reaches the end of the array.
+
+After the loop, j will be the index of the last unique element in the modified array.
+
+We return j + 1 as the length of the array with unique elements.
