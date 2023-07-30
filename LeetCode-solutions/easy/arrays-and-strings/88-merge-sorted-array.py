@@ -85,7 +85,7 @@ class Solution:
                 nums1[p] = nums2[p2]
                 p2 -= 1
 
-
+---------------------------------
 Approach 4 : Four Pointers
 def merge(nums1, m, nums2, n):
     # Starting from the end of both arrays.
