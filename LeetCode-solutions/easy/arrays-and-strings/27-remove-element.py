@@ -66,8 +66,6 @@ class Solution:
 -----------------------------
 rumtime: 32 ms
 
-    
-    
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         i = 0
@@ -79,3 +77,30 @@ class Solution:
                 continue
             i += 1
         return len(nums)
+
+--------------------------
+Solution:
+def remove_element(nums, val):
+    i = 0  # Pointer to iterate the array.
+
+    for num in nums:
+        if num != val:
+            nums[i] = num
+            i += 1
+
+    return i
+
+Explanation:
+The function remove_element takes a list nums and a value val as input.
+
+We use a pointer i to iterate through the array.
+
+We loop through the elements in the array using a for loop.
+
+If the current element num is not equal to the given value val, it means we want to keep this element in the modified array. So, we copy it to the position indicated by i in the original array and increment i by 1.
+
+We repeat this process until we have processed all the elements in the array.
+
+After the loop, i will be the index of the last element in the modified array.
+
+We return i, which represents the new length of the array after removing all instances of val.
