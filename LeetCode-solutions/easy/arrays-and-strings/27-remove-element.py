@@ -50,9 +50,7 @@ class Solution:
         return count
 -----------------------------
 runtime : 32 ms, beats 73.16%
-memory usage: 13.9 mb, beats 99.92%
-
-    
+memory usage: 13.9 mb, beats 99.92%    
     
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
@@ -92,15 +90,9 @@ def remove_element(nums, val):
 
 Explanation:
 The function remove_element takes a list nums and a value val as input.
-
 We use a pointer i to iterate through the array.
-
 We loop through the elements in the array using a for loop.
-
 If the current element num is not equal to the given value val, it means we want to keep this element in the modified array. So, we copy it to the position indicated by i in the original array and increment i by 1.
-
 We repeat this process until we have processed all the elements in the array.
-
 After the loop, i will be the index of the last element in the modified array.
-
 We return i, which represents the new length of the array after removing all instances of val.
