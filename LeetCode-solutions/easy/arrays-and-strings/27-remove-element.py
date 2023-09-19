@@ -32,7 +32,16 @@ Constraints:
 0 <= nums.length <= 100
 0 <= nums[i] <= 50
 0 <= val <= 100
-
+----------------------------
+class Solution:
+    def removeElement(self, nums, val):
+        i = 0
+        while i < len(nums):
+            if nums[i] == val:
+                nums.pop(i)
+            else:
+                i += 1
+        return len(nums)
 -----------------------------
 Solution:
 class Solution:
