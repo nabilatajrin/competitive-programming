@@ -33,6 +33,23 @@ Constraints:
 nums is sorted in ascending order.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+def remove_duplicates(nums):
+    """
+    Removes the duplicates from a sorted array.
+    Args:
+        nums: A list of integers.
+    Returns:
+        The new length of the array.
+    """
+    i = 0
+    j = 1
+    while j < len(nums):
+        if nums[i] != nums[j]:
+            i += 1
+            nums[i] = nums[j]
+        j += 1
+    return i + 1
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 Solution:
 
 class Solution:
