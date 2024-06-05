@@ -1,3 +1,68 @@
+Understand the Problem: In this problem, we're given a binary tree, and we need to swap the left and right subtrees of every node in the tree.
+
+Think of a Simple Example: Let's consider a simple binary tree with just one node:
+
+markdown
+Copy code
+    1
+After swapping, it will remain the same because it has no left or right subtree.
+
+Find a Strategy: To solve this problem, we can use a recursive approach. We'll start from the root of the tree and swap its left and right subtrees. Then, we'll recursively do the same for the left and right subtrees.
+
+Explain the Code:
+
+python
+Copy code
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def invertTree(root):
+    if root is None:  # Base case: if the root is None, there's nothing to swap.
+        return None
+    
+    # Swap the left and right subtrees of the current node.
+    root.left, root.right = root.right, root.left
+    
+    # Recursively swap the left and right subtrees of the current node.
+    invertTree(root.left)
+    invertTree(root.right)
+    
+    return root  # Return the root of the inverted tree.
+
+# Let's create a sample tree to test our function
+#       1
+#      / \
+#     2   3
+#    / \ / \
+#   4  5 6  7
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+root.right.left = TreeNode(6)
+root.right.right = TreeNode(7)
+
+# Test the function
+new_root = invertTree(root)
+Run Through the Code with an Example: We start at the root node, which is 1. We swap its left and right subtrees, so the tree becomes:
+
+markdown
+Copy code
+    1
+   / \
+  3   2
+Then, we recursively call invertTree for the left subtree (which is now 3) and the right subtree (which is now 2). This process continues until we reach the leaves of the tree.
+
+Explain the Output: After swapping the left and right subtrees of every node in the tree, we get the inverted tree. The output here is not printed, but you would get the inverted tree in new_root.
+
+So, in simple terms, we're flipping the tree upside down, swapping the left and right subtrees of each node, starting from the root and going all the way down to the leaves.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 Understand the Problem: In this problem, we're given an array of numbers, and we need to find out if there are any duplicates in the array.
 
 Think of a Simple Example: Let's say we have an array [1, 2, 3, 4, 1]. Here, 1 appears twice, so the answer should be True, indicating that there are duplicates.
