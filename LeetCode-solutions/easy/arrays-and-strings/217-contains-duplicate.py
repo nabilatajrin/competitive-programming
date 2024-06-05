@@ -1,3 +1,34 @@
+Understand the Problem: In this problem, we're given an array of numbers, and we need to find out if there are any duplicates in the array.
+
+Think of a Simple Example: Let's say we have an array [1, 2, 3, 4, 1]. Here, 1 appears twice, so the answer should be True, indicating that there are duplicates.
+
+Find a Strategy: One simple way to solve this is by using a set. We can iterate through the array, adding each element to the set. If we encounter an element that's already in the set, it means we've found a duplicate.
+
+Explain the Code:
+
+python
+Copy code
+def containsDuplicate(nums):
+    num_set = set()  # Create an empty set to store unique numbers.
+    
+    for num in nums:  # Iterate through each number in the array.
+        if num in num_set:  # If the number is already in the set, it's a duplicate.
+            return True
+        else:
+            num_set.add(num)  # Otherwise, add it to the set.
+    
+    return False  # If we reach here, it means there are no duplicates.
+
+# Test the function
+nums = [1, 2, 3, 4, 1]
+print(containsDuplicate(nums))  # Output should be True
+Run Through the Code with an Example: We start with an empty set. Then, we go through each number in the array. If we find a number that's already in the set, it means it's a duplicate, so we return True. Otherwise, we add the number to the set. If we go through the whole array without finding any duplicates, we return False.
+
+Explain the Output: The output is True, indicating that there are duplicates in the array.
+
+So, in simple terms, we're checking if there are any numbers that appear more than once in the array. We use a set to keep track of the numbers we've seen, and if we find a number that's already in the set, it means we've found a duplicate.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
 LeetCode: https://leetcode.com/problems/contains-duplicate/
 
 Solution 1:
